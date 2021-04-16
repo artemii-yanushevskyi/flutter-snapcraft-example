@@ -3,7 +3,7 @@ workflows:
     name: Snapcraft Release
     instance_type: linux
     triggering:
-      branch_patterns:
+      tag_patterns:
          - pattern: '*-test'
            include: true
       events:
