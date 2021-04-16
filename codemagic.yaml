@@ -2,6 +2,11 @@ workflows:
   snapcraft-release:
     name: Snapcraft Release
     instance_type: linux
+    triggering:
+      tag_patterns:
+         - pattern: '*-test'
+      events:
+        - tag
     environment:
       flutter: master
       vars:
