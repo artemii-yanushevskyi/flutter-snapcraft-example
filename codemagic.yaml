@@ -7,7 +7,7 @@ workflows:
          - pattern: '*-test'
            include: true
       events:
-        - push
+        - tag
     environment:
       flutter: master
       vars:
