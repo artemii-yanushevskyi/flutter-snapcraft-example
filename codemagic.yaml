@@ -21,11 +21,11 @@ workflows:
         script: snapcraft snap --output flutter-codemagic-example.snap
         when:
           changeset:
-            excludes: 
-              - '.'
+            includes:
+              - 'README.md'
       - name: Upload and release
         script: snapcraft upload flutter-codemagic-example.snap --release stable
         when:
           changeset:
-            excludes: 
-              - '.'
+            includes: 
+              - 'README.md'
